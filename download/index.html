@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Android版ダウンロード | LM攻略シミュレーター</title>
+<style>
+  :root {
+    --primary-blue: #0075de;
+    --sky-tint: #e6f3fe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--sky-tint);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    color: #1a1a1a;
+    padding: 24px 16px 48px;
+  }
+  .wrap {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--primary-blue);
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 20px;
+  }
+  .version {
+    display: inline-block;
+    background: var(--sky-tint);
+    color: var(--primary-blue);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .btn:active { opacity: 0.85; }
+  .meta {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    text-align: left;
+  }
+  .steps {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: step;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--primary-blue);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .notice {
+    background: var(--sky-tint);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #333;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .notice strong { color: var(--primary-blue); }
+  .links {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+  }
+  .links a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>LM攻略シミュレーター（Android版）</h1>
+      <p class="subtitle">Lords Mobile 攻略計算ツール</p>
+      <div class="version">最新バージョン: v1.0.0</div>
+      <a class="btn" href="#" id="downloadBtn">APKをダウンロード</a>
+      <p class="meta">Google Play以外での配布です。ダウンロードには「提供元不明のアプリ」の許可が必要です。</p>
+    </div>
+
+    <div class="card">
+      <p class="section-title">インストール手順</p>
+      <ol class="steps">
+        <li>上のボタンからAPKファイルをダウンロードします。</li>
+        <li>ダウンロード完了後、通知またはファイルをタップして開きます。</li>
+        <li>「このソースからのアプリを許可しますか」と表示されたら、使用しているブラウザ（Chromeなど）を許可してください。</li>
+        <li>「インストール」をタップして完了です。</li>
+      </ol>
+    </div>
+
+    <div class="notice">
+      <strong>これは公式の配布ページです。</strong><br>
+      本アプリはGoogle Playには公開しておらず、この公式サイトからのみ配布しています。他のサイトからダウンロードしたAPKにはご注意ください。
+    </div>
+
+    <div class="links">
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8195ac5ad62f5eb7f08a">プライバシーポリシー</a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a81c6b0ccd05eb4c8912c">利用規約</a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8188a5edda1d7623f640">サポート</a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c3ab2d2810a81d09be9d4bdde96d3fa">特定商取引法に基づく表記</a>
+    </div>
+  </div>
+</body>
+</html>

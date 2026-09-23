@@ -1,7 +1,10 @@
 {
   "latestVersion": "1.0.6",
   "forceUpdate": false,
-  "storeUrl": "https://apps.apple.com/app/id6804715419",
+  "storeUrl": {
+    "ios": "https://apps.apple.com/app/id6804715419",
+    "android": "https://kaaaya-lm.github.io/download"
+  },
   "message": {
     "ja": "新しいバージョンが公開されました。最新機能をご利用いただくにはアップデートしてください。",
     "en": "A new version is available. Update to get the latest features.",

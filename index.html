@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LM攻略シミュレーター | Lords Mobile向け計算ツール - LM Strategy Simulator for Lords Mobile</title>
+<meta name="description" content="Lords Mobile（ロードモバイル）攻略者向けの無料計算・シミュレーションツール集。戦闘予測、装備最適化、アーティファクト・外装の育成効率など9ツールを収録。iOS/Android対応。 Free calculation and simulation tools for Lords Mobile players: battle prediction, gear optimization, artifact and castle skin efficiency, and more.">
+<style>
+  :root {
+    --primary-blue: #0075de;
+    --sky-tint: #e6f3fe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--sky-tint);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    color: #1a1a1a;
+    padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; }
+  .lang-switch {
+    text-align: right;
+    margin-bottom: 10px;
+  }
+  .lang-switch button {
+    background: #fff;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+  .lang-switch button.active {
+    background: var(--primary-blue);
+    color: #fff;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--primary-blue);
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .btn:active { opacity: 0.85; }
+  .btn.secondary {
+    background: #fff;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+  }
+  .disclaimer {
+    background: var(--sky-tint);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #555;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .links {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+  }
+  .links a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="lang-switch">
+      <button id="btnJa" onclick="setLang('ja')">日本語</button>
+      <button id="btnEn" onclick="setLang('en')">English</button>
+    </div>
+
+    <div class="card">
+      <h1>LM攻略シミュレーター</h1>
+      <p class="subtitle i18n" data-ja="Lords Mobile向けの無料計算・シミュレーションツール集です。戦闘予測、装備最適化、アーティファクト・外装の育成効率など9種類のツールを収録しています。" data-en="Free calculation and simulation tools for Lords Mobile players. Includes 9 tools: battle prediction, gear optimization, artifact and castle skin efficiency, and more."></p>
+      <a class="btn" href="https://apps.apple.com/app/id6804715419" target="_blank" rel="noopener">
+        <span class="i18n" data-ja="iOS版（App Store）" data-en="iOS (App Store)"></span>
+      </a>
+      <a class="btn secondary" href="https://kaaaya-lm.github.io/download">
+        <span class="i18n" data-ja="Android版（APKダウンロード）" data-en="Android (APK Download)"></span>
+      </a>
+    </div>
+
+    <div class="disclaimer i18n"
+      data-ja="本アプリは非公式のファンメイドツールであり、Lords Mobileおよびその運営会社とは一切関係ありません。"
+      data-en="This is an unofficial fan-made tool and is not affiliated with or endorsed by Lords Mobile or its publisher.">
+    </div>
+
+    <div class="links">
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8195ac5ad62f5eb7f08a" class="i18n" data-ja="プライバシーポリシー" data-en="Privacy Policy"></a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a81c6b0ccd05eb4c8912c" class="i18n" data-ja="利用規約" data-en="Terms of Service"></a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8188a5edda1d7623f640" class="i18n" data-ja="サポート" data-en="Support"></a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c3ab2d2810a81d09be9d4bdde96d3fa" class="i18n" data-ja="特定商取引法に基づく表記" data-en="Legal Notice"></a>
+    </div>
+  </div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.i18n').forEach(function(el) {
+      el.textContent = el.dataset[lang === 'ja' ? 'ja' : 'en'];
+    });
+    document.getElementById('btnJa').classList.toggle('active', lang === 'ja');
+    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+    localStorage.setItem('lm_lang', lang);
+  }
+  (function() {
+    var saved = localStorage.getItem('lm_lang');
+    var lang = saved || (navigator.language && navigator.language.startsWith('ja') ? 'ja' : 'en');
+    setLang(lang);
+  })();
+</script>
+</body>
+</html>

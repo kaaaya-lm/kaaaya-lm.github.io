@@ -2,10 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LM攻略シミュレーター - Lords Mobile(ロードモバイル)攻略アプリ</title>
-<meta name="description" content="Lords Mobile（ロードモバイル／通称ローモバ）攻略者向けの無料スマホアプリ。戦闘予測・装備最適化・アーティファクト効率など9ツールを収録。iPhone/Android対応。 A free companion app for Lords Mobile players: battle simulator, gear optimizer, artifact efficiency calculator, and more.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>LM攻略シミュレーター - ローモバ攻略・計算アプリ</title>
+<meta name="description" content="Lords Mobile（ロードモバイル）攻略者向けの無料スマホアプリ。戦闘予測・装備最適化・アーティファクト効率など9ツールを収録。iPhone/Android対応。 A free companion app for Lords Mobile players: battle simulator, gear optimizer, artifact efficiency calculator, and more.">
 <meta name="google-site-verification" content="AENlSkbOmQFKrjeFDLgvQtddjqu5Ec9V54Bd4WjKhII" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"LM攻略シミュレーター","alternateName":["LM Strategy Simulator","ローモバ計算アプリ"],"url":"https://kaaaya-lm.github.io/"}
+</script>
+<meta property="og:site_name" content="LM攻略シミュレーター">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/favicon.png">
   <style>
   :root {
     --primary-blue: #0075de;
@@ -14,10 +20,10 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--sky-tint);
+    background: #f4f9ff linear-gradient(180deg, #d6ebff 0, #f4f9ff 460px) no-repeat;
     font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
-    color: #1a1a1a;
-    padding: 24px 16px 48px;
+    color: #1a2b3c;
+    padding: 24px 16px 96px;
   }
   .wrap { max-width: 480px; margin: 0 auto; }
   .lang-switch {
@@ -39,27 +45,26 @@
     color: #fff;
   }
   .card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 32px 24px;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-bottom: 20px;
+    padding: 12px 0 8px;
+    margin-bottom: 8px;
   }
   h1 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
-    margin: 0 0 4px;
-    color: var(--primary-blue);
+    line-height: 1.3;
+    margin: 0 0 12px;
+    color: #1a2b3c;
   }
-      h1 .h1-sub {
+  h1 .h1-sub {
     display: block;
     font-size: 15px;
     margin-top: 4px;
-      }
+    color: var(--primary-blue);
+  }
   .subtitle {
     font-size: 13px;
-    color: #666;
+    color: #4a5b6c;
     margin: 0 0 24px;
     line-height: 1.6;
   }
@@ -82,7 +87,7 @@
     border: 2px solid var(--primary-blue);
   }
   .disclaimer {
-    background: var(--sky-tint);
+    background: rgba(255,255,255,.7);
     border-radius: 10px;
     padding: 14px 16px;
     font-size: 12px;
@@ -101,6 +106,27 @@
     text-decoration: none;
     margin: 0 8px;
   }
+  .about { margin: 36px 0 28px; }
+  .about h2 { font-size: 19px; line-height: 1.45; text-align: center; margin: 0 0 12px; }
+  .about h2 span { display: inline-block; }
+  .about .lead { font-size: 13.5px; line-height: 1.8; color: #4a5b6c; margin: 0 0 6px; }
+  .about .lab { font-size: 12px; font-weight: 700; letter-spacing: .05em; color: var(--primary-blue); margin: 20px 0 8px; }
+  .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tool { background: #fff; border-radius: 18px; padding: 14px; box-shadow: 0 2px 10px rgba(0,117,222,.08); }
+  .tool.wide { grid-column: span 2; }
+  .tool b { display: block; font-size: 13px; letter-spacing: -.02em; margin-bottom: 4px; }
+  .tool p { margin: 0; font-size: 11.5px; line-height: 1.6; color: #4a5b6c; }
+  .about .note { font-size: 12.5px; line-height: 1.7; color: #4a5b6c; margin: 18px 0 0; }
+  .cta-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    background: rgba(255,255,255,.94); box-shadow: 0 -4px 16px rgba(0,0,0,.08);
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    transform: translateY(110%); transition: transform .25s;
+  }
+  .cta-bar.show { transform: none; }
+  .cta-bar div { max-width: 480px; margin: 0 auto; display: flex; gap: 8px; }
+  .cta-bar a { flex: 1; text-align: center; padding: 12px; border-radius: 12px; font-weight: 700; font-size: 14px; color: #fff; background: var(--primary-blue); text-decoration: none; }
+  .cta-bar a + a { background: #1a2b3c; }
 </style>
 </head>
 <body>
@@ -116,10 +142,31 @@
       <a class="btn" href="https://apps.apple.com/app/id6804715419" target="_blank" rel="noopener">
         <span class="i18n" data-ja="iOS版（App Store）" data-en="iOS (App Store)"></span>
       </a>
-      <a class="btn secondary" href="https://kaaaya-lm.github.io/download">
+      <a class="btn secondary" id="topCta" href="https://kaaaya-lm.github.io/download">
         <span class="i18n" data-ja="Android版（APKダウンロード）" data-en="Android (APK Download)"></span>
       </a>
     </div>
+
+    <section class="about" id="about">
+      <h2><span>Lords Mobile攻略に使える</span> <span>9つの計算ツール</span></h2>
+      <p class="lead">LM攻略シミュレーターは、Lords Mobile（ロードモバイル／ローモバ）向けの計算ツールを1つにまとめた無料アプリです。数値を入力するだけで、次の計算ができます。</p>
+      <div class="lab">メインツール</div>
+      <div class="tools">
+        <div class="tool"><b>戦闘シミュレーター</b><p>ブーストと部隊構成を入力して、戦闘結果を簡易的に計算します。</p></div>
+        <div class="tool"><b>装備シミュレーター</b><p>ジュエル・シギルを含めた、最適な装備の組み合わせと強化効率が分かります。</p></div>
+        <div class="tool"><b>アーティファクト効率表</b><p>レベルアップと強化の効率を算出し、無駄のない育成の優先順位が分かります。</p></div>
+        <div class="tool"><b>外装効率表</b><p>外装強化の効率を算出し、費用対効果の高い育成を選べます。</p></div>
+        <div class="tool wide"><b>訓練シミュレーター</b><p>訓練を効率よく進めるための必要資源量と、時短量を算出します。</p></div>
+      </div>
+      <div class="lab">その他の便利ツール</div>
+      <div class="tools">
+        <div class="tool"><b>ラリートピック計算</b><p>ラリートピックの数値から、相手の被害ティアを推定します。</p></div>
+        <div class="tool"><b>兵士割合計算</b><p>兵種とグレードの割合、軍隊規模を入力すると、内訳の兵数を自動で計算します。</p></div>
+        <div class="tool"><b>妨害兵数計算</b><p>増援の増加撃破数などから、防衛城の兵数を逆算します。</p></div>
+        <div class="tool"><b>前衛兵種確認</b><p>3種類の攻撃パターンのパワードロップから、ターゲット城の前衛兵種を判別します。</p></div>
+      </div>
+      <p class="note">装備・アーティファクト・戦闘の画面は、スクリーンショットからの自動入力にも対応しています。iPhone・Androidで使えます。</p>
+    </section>
 
     <div class="disclaimer i18n"
       data-ja="本アプリは非公式のファンメイドツールであり、Lords Mobileおよびその運営会社とは一切関係ありません。"
@@ -134,6 +181,11 @@
     </div>
   </div>
 
+  <div class="cta-bar" id="ctaBar"><div>
+    <a href="https://apps.apple.com/app/id6804715419" target="_blank" rel="noopener"><span class="i18n" data-ja="iOS版" data-en="iOS"></span></a>
+    <a href="https://kaaaya-lm.github.io/download"><span class="i18n" data-ja="Android版" data-en="Android"></span></a>
+  </div></div>
+
 <script>
   function setLang(lang) {
     document.querySelectorAll('.i18n').forEach(function(el) {
@@ -142,13 +194,20 @@
     document.getElementById('btnJa').classList.toggle('active', lang === 'ja');
     document.getElementById('btnEn').classList.toggle('active', lang === 'en');
     document.documentElement.lang = lang;
+    document.getElementById('about').hidden = lang !== 'ja';
     localStorage.setItem('lm_lang', lang);
   }
   (function() {
     var saved = localStorage.getItem('lm_lang');
-    var lang = saved || (navigator.language && navigator.language.startsWith('ja') ? 'ja' : 'en');
+    var lang = saved || 'ja';
     setLang(lang);
   })();
+  if ('IntersectionObserver' in window) {
+    var bar = document.getElementById('ctaBar');
+    new IntersectionObserver(function(e) {
+      bar.classList.toggle('show', !e[0].isIntersecting && e[0].boundingClientRect.top < 0);
+    }).observe(document.getElementById('topCta'));
+  }
 </script>
 </body>
 </html>

@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>LM攻略シミュレーター - ローモバ攻略・計算アプリ</title>
-<meta name="description" content="Lords Mobile（ロードモバイル／通称ローモバ）攻略者向けの無料スマホアプリ。戦闘予測・装備最適化・アーティファクト効率など9ツールを収録。iPhone/Android対応。">
-<link rel="canonical" href="https://kaaaya-lm.github.io/">
+<title>LM攻略模擬器 - 王國紀元攻略計算工具</title>
+<meta name="description" content="專為《王國紀元》（Lords Mobile）玩家打造的免費手機應用程式。收錄戰鬥模擬、裝備最佳化、文物效率表等9種計算工具，支援iPhone與Android。">
+<link rel="canonical" href="https://kaaaya-lm.github.io/zh-tw/">
 <link rel="alternate" hreflang="ja" href="https://kaaaya-lm.github.io/">
 <link rel="alternate" hreflang="en" href="https://kaaaya-lm.github.io/en/">
 <link rel="alternate" hreflang="zh-Hans" href="https://kaaaya-lm.github.io/zh-cn/">
 <link rel="alternate" hreflang="zh-Hant" href="https://kaaaya-lm.github.io/zh-tw/">
 <link rel="alternate" hreflang="x-default" href="https://kaaaya-lm.github.io/">
-<meta name="google-site-verification" content="AENlSkbOmQFKrjeFDLgvQtddjqu5Ec9V54Bd4WjKhII" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"LM攻略シミュレーター","alternateName":["LM Strategy Simulator","ローモバ計算アプリ"],"url":"https://kaaaya-lm.github.io/"}
-</script>
-<meta property="og:site_name" content="LM攻略シミュレーター">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/favicon.png">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; }
   :root { --primary-blue: #0075de; --sky-tint: #e6f3fe; }
   * { box-sizing: border-box; }
   body {
@@ -84,57 +79,57 @@
 <body>
   <div class="wrap">
     <nav class="lang-switch" aria-label="Language">
-      <span class="active" aria-current="page">日本語</span>
+      <a href="/" hreflang="ja" lang="ja">日本語</a>
       <a href="/en/" hreflang="en" lang="en">English</a>
       <a href="/zh-cn/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
-      <a href="/zh-tw/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+      <span class="active" aria-current="page">繁體中文</span>
     </nav>
 
     <div class="card">
-      <h1>LM攻略シミュレーター <span class="h1-sub">ローモバ攻略・計算アプリ</span></h1>
-      <p class="subtitle">Lords Mobile（ロードモバイル／ローモバ）向けの無料スマホアプリです。戦闘予測・装備最適化・アーティファクト育成効率など9種類の計算ツールを収録。iPhone・Androidに対応しています。</p>
+      <h1>LM攻略模擬器 <span class="h1-sub">王國紀元攻略·計算工具</span></h1>
+      <p class="subtitle">專為《王國紀元》（Lords Mobile）玩家打造的免費手機應用程式（非網頁工具）。收錄戰鬥預測、裝備最佳化、文物培養效率等9種計算工具，支援iPhone與Android。</p>
       <a class="btn" href="https://apps.apple.com/app/id6804715419" target="_blank" rel="noopener">iOS版（App Store）</a>
-      <a class="btn secondary" id="topCta" href="https://kaaaya-lm.github.io/download/?lang=ja">Android版（APKダウンロード）</a>
+      <a class="btn secondary" id="topCta" href="https://kaaaya-lm.github.io/download/?lang=zh-tw">Android版（APK下載）</a>
     </div>
 
     <section class="about">
-      <h2><span>Lords Mobile攻略に使える</span> <span>9つの計算ツール</span></h2>
-      <p class="lead">LM攻略シミュレーターは、Lords Mobile（ロードモバイル／ローモバ）向けの計算ツールを1つにまとめた無料アプリです。数値を入力するだけで、次の計算ができます。</p>
-      <div class="lab">メインツール</div>
+      <h2><span>助力《王國紀元》攻略的</span> <span>9種計算工具</span></h2>
+      <p class="lead">LM攻略模擬器是一款免費應用程式，將《王國紀元》（Lords Mobile）的各類計算工具集於一身。只需輸入數值，即可完成以下計算。</p>
+      <div class="lab">主要工具</div>
       <div class="tools">
-        <div class="tool"><b>戦闘シミュレーター</b><p>ブーストと部隊構成を入力して、戦闘結果を簡易的に計算します。</p></div>
-        <div class="tool"><b>装備シミュレーター</b><p>ジュエル・シギルを含めた、最適な装備の組み合わせと強化効率が分かります。</p></div>
-        <div class="tool"><b>アーティファクト表</b><p>レベルアップと強化の効率を算出し、無駄のない育成の優先順位が分かります。</p></div>
-        <div class="tool"><b>外装効率表</b><p>外装強化の効率を算出し、費用対効果の高い育成を選べます。</p></div>
-        <div class="tool wide"><b>訓練シミュレーター</b><p>訓練を効率よく進めるための必要資源量と、時短量を算出します。</p></div>
+        <div class="tool"><b>戰鬥模擬器</b><p>輸入加成與部隊構成，快速估算戰鬥結果。</p></div>
+        <div class="tool"><b>裝備模擬器</b><p>找出包含寶石、戰紋在內的最佳裝備搭配，並掌握強化效率。</p></div>
+        <div class="tool"><b>文物效率表</b><p>計算升級與強化效率，明確不浪費資源的培養優先順序。</p></div>
+        <div class="tool"><b>城堡外觀效率表</b><p>計算城堡外觀強化效率，選出性價比最高的培養方案。</p></div>
+        <div class="tool wide"><b>訓練模擬器</b><p>計算高效訓練所需的資源量與時短用量。</p></div>
       </div>
-      <div class="lab">その他便利ツール</div>
+      <div class="lab">其他實用工具</div>
       <div class="tools">
-        <div class="tool"><b>ラリートピック計算</b><p>ラリートピックの数値から、相手の被害ティアを推定します。</p></div>
-        <div class="tool"><b>兵士割合計算</b><p>兵種とグレードの割合、軍隊規模を入力すると、内訳の兵数を自動で計算します。</p></div>
-        <div class="tool"><b>妨害兵数計算</b><p>増援の増加撃破数などから、防衛城の兵数を逆算します。</p></div>
-        <div class="tool"><b>前衛兵種確認</b><p>3種類の攻撃パターンのパワードロップから、ターゲット城の前衛兵種を判別します。</p></div>
+        <div class="tool"><b>集結戰報計算</b><p>根據集結戰報數值，推算敵方各兵種等級的損失。</p></div>
+        <div class="tool"><b>兵種比例計算</b><p>輸入兵種比例、兵種等級比例和軍隊規模，自動計算各類兵力明細。</p></div>
+        <div class="tool"><b>駐防兵力反算工具</b><p>根據增援的擊殺增量等數值，反算防守城的駐軍兵力。</p></div>
+        <div class="tool"><b>前排兵種確認</b><p>根據三種攻擊模式的掉落戰力，判定目標城的前排兵種。</p></div>
       </div>
-      <p class="note">装備・アーティファクト・戦闘の画面は、スクリーンショットからの自動入力にも対応しています。iPhone・Androidで使えます。</p>
+      <p class="note">裝備、文物、戰鬥畫面還支援透過截圖自動輸入。支援iPhone與Android。</p>
     </section>
 
-    <div class="disclaimer">本アプリは非公式のファンメイドツールであり、Lords Mobileおよびその運営会社とは一切関係ありません。</div>
+    <div class="disclaimer">本應用程式為非官方的同人工具，與《王國紀元》（Lords Mobile）及其營運公司沒有任何關聯。</div>
 
     <div class="links">
-      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8195ac5ad62f5eb7f08a">プライバシーポリシー</a>
-      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a81c6b0ccd05eb4c8912c">利用規約</a>
-      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8188a5edda1d7623f640">サポート</a>
-      <a href="https://respected-taxicab-8a1.notion.site/3c3ab2d2810a81d09be9d4bdde96d3fa">特定商取引法に基づく表記</a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8195ac5ad62f5eb7f08a">隱私權政策</a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a81c6b0ccd05eb4c8912c">服務條款</a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c0ab2d2810a8188a5edda1d7623f640">支援</a>
+      <a href="https://respected-taxicab-8a1.notion.site/3c3ab2d2810a81d09be9d4bdde96d3fa">法律聲明</a>
     </div>
   </div>
 
   <div class="cta-bar" id="ctaBar"><div>
     <a href="https://apps.apple.com/app/id6804715419" target="_blank" rel="noopener">iOS版</a>
-    <a href="https://kaaaya-lm.github.io/download/?lang=ja">Android版</a>
+    <a href="https://kaaaya-lm.github.io/download/?lang=zh-tw">Android版</a>
   </div></div>
 
 <script>
-  try { localStorage.setItem('lm_lang', 'ja'); } catch (e) {}
+  try { localStorage.setItem('lm_lang', 'zh-tw'); } catch (e) {}
   if ('IntersectionObserver' in window) {
     var bar = document.getElementById('ctaBar');
     new IntersectionObserver(function(e) {

@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kaaaya-lm.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kaaaya-lm.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaaaya-lm.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kaaaya-lm.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://kaaaya-lm.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kaaaya-lm.github.io/"/>
   </url>
   <url>
-    <loc>https://kaaaya-lm.github.io/download</loc>
+    <loc>https://kaaaya-lm.github.io/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kaaaya-lm.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaaaya-lm.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kaaaya-lm.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://kaaaya-lm.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kaaaya-lm.github.io/"/>
+  </url>
+  <url>
+    <loc>https://kaaaya-lm.github.io/zh-cn/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kaaaya-lm.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaaaya-lm.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kaaaya-lm.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://kaaaya-lm.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kaaaya-lm.github.io/"/>
+  </url>
+  <url>
+    <loc>https://kaaaya-lm.github.io/zh-tw/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kaaaya-lm.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kaaaya-lm.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://kaaaya-lm.github.io/zh-cn/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://kaaaya-lm.github.io/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kaaaya-lm.github.io/"/>
+  </url>
+  <url>
+    <loc>https://kaaaya-lm.github.io/download/</loc>
   </url>
 </urlset>
